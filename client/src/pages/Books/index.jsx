@@ -5,7 +5,7 @@ import BookListItem from "../../components/BookListItem";
 const apiUrl = `${import.meta.env.VITE_API_URL}/books`;
 
 export default function Books() {
-  const { userData, setUserData } = useContext(UserContext); // Check if the user is logged in
+  const { userData } = useContext(UserContext); // Check if the user is logged in
   const [books, setBooks] = useState([]);
   const [errorMessage, setErrorMessage] = useState("");
   const { userId } = userData || {};
